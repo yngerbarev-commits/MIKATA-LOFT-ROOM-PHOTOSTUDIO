@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panorama Booking System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar">
+        <div class="nav-group">
+            <div id="nav-1" class="nav-item active">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>Ամսաթիվ և ժամ</span>
+                <div class="status-dot" id="dot-1"></div>
+            </div>
+            <div id="nav-2" class="nav-item">
+                <i class="fa-regular fa-user"></i>
+                <span>Տվյալներ</span>
+                <div class="status-dot" id="dot-2"></div>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="contact-box">
+                <p>Հետադարձ կապ</p>
+                <strong>+37494051040</strong>
+                <p class="email">appointment@panoramastudios.am</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content-area">
+        <div id="step-1" class="step-content active">
+            <h2 class="step-title">Ամսաթիվ և ժամ</h2>
+            
+            <div class="filter-bar">
+                <select><option>April</option></select>
+                <select><option>2026</option></select>
+                <select class="time-select"><option>1h</option></select>
+            </div>
+
+            <div class="calendar-wrapper">
+                <div class="weekdays">
+                    <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+                </div>
+                <div class="days-grid" id="daysGrid"></div>
+            </div>
+
+            <div id="timeSection" class="time-section">
+                <p class="section-label">Հասանելի ժամեր՝</p>
+                <div class="time-slots" id="timeSlots"></div>
+            </div>
+        </div>
+
+        <div id="step-2" class="step-content">
+            <h2 class="step-title">Տվյալներ</h2>
+            <div class="input-form">
+                <div class="field">
+                    <label>Անուն Ազգանուն *</label>
+                    <input type="text" id="clientName" placeholder="Մուտքագրեք ձեր անունը">
+                </div>
+                <div class="field">
+                    <label>Հեռախոսահամար *</label>
+                    <input type="tel" id="clientPhone" placeholder="+374 __ ___ ___">
+                </div>
+                <div class="summary-card" id="selectionSummary"></div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <button class="btn-next" id="actionBtn" disabled>Շարունակել</button>
+        </footer>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
